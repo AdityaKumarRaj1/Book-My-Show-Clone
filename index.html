@@ -16,16 +16,66 @@
 </head>
 
 <body>
+     <!-- input modal -->
+    <div class="input-modal" id="input-modal">
+        <div class="input-modal1"><input type="text" placeholder="Search for Movies, Events, Plays & more">
+            <span><i class="fa-solid fa-xmark" id="deleteBtn"></i></span>
+        </div>
+        <div class="suggest-content">
+            <div>Movies</div>
+            <div>Stream</div>
+            <div>Events</div>
+            <div>Plays</div>
+            <div>Sports</div>
+            <div>Activities</div>
+            <div>Venue</div>
+            <div>Offers</div>
+            <div>Others</div>
+        </div>
+        
+        <div class="leftscroll"><i class="fa-solid fa-less-than"></i></div>
+        <div class="rightscroll"><i class="fa-solid fa-greater-than"></i></div>
+
+        <div class="suggestion">
+            <p style="text-align: center; margin-bottom: 10px;">Trendig Searches</p>
+            <div class="suggest ABC">
+                <p>Kantara a Legend Part 1</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>Dude</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>Lik : Love insurence Company</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>idli kadaai</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>Bison Kaalamaadan</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>They Call him OG</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest">
+                <p>Demon Slayer: kimetsu no yaiba</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+            <div class="suggest DEF">
+                <p>Tron: Ares</p><i><i class="fa-solid fa-film"></i></i>
+            </div>
+        </div>
+    </div>
     <header>
-          <div class="page-overlay"></div>
+        <div class="page-overlay"></div>
         <!-- first div left ke liye  -->
         <div class="first-header">
             <div class="logo-input">
                 <img src="logo.png" alt="">
-                <div class="logo-input1"><i class="fa-solid fa-magnifying-glass"></i>
+                <div class="logo-input1" id="logo-input1"><i class="fa-solid fa-magnifying-glass"></i>
                     <p>Search for Movies, Events, Plays, Sports & Activities</p>
                 </div>
             </div>
+
+            
             <!-- first div right ke liye  -->
             <div class="city-ham">
                 <div class="select-city" id="select-city">City<i class="fa-solid fa-angle-down"></i></div>
@@ -34,79 +84,92 @@
             </div>
         </div>
 
-           <!-- ham button -->
-    <div class="ham-content">
-        <div class="ham1">Hey!</div>
-        <div class="ham2">
-            <img src="gift.avif" alt="" style="width: 40px;">
-            <a href="#">Unlock special offers & great benefits</a>
-            <button>Login / Register</button>
-        </div>
-        <div class="ham3">
-            <div class="ham4"><i class="fa-solid fa-bell"></i>
-                <p>Notifications</p>
+        <!-- ham button -->
+        <div class="ham-content">
+            <div class="ham1">Hey!</div>
+            <div class="ham2">
+                <img src="gift.avif" alt="" style="width: 40px;">
+                <a href="#">Unlock special offers & great benefits</a>
+                <button>Login / Register</button>
             </div>
-         <span><i class="fa-solid fa-greater-than"></i></span>
-        </div>
-        <div class="ham3 ham5">
-            <div class="ham4">
-               <div><i class="fa-solid fa-bag-shopping"></i></div> 
-               <div> <p>Your Order</p>
-                <a href="">View all your booking & purcheses</a></div>
+            <div class="ham3">
+                <div class="ham4"><i class="fa-solid fa-bell"></i>
+                    <p>Notifications</p>
+                </div>
+                <span><i class="fa-solid fa-greater-than"></i></span>
             </div>
-           <span><i class="fa-solid fa-lock"></i></span> 
-        </div>
-        <div class="ham3 ham5">
-            <div class="ham4">
-               <div> <i class="fa-solid fa-desktop"></i></div>
-               <div> <p>Stream Library</p>
-                <a href="#">Rented & Purchase Movies</a></div>
+            <div class="ham3 ham5">
+                <div class="ham4">
+                    <div><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div>
+                        <p>Your Order</p>
+                        <a href="">View all your booking & purcheses</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-lock"></i></span>
             </div>
-             <span><i class="fa-solid fa-lock"></i></span>
-        </div>
-        <div class="ham3">
-            <div class="ham4">
-                <div><i class="fa-solid fa-credit-card"></i></div>
-               <div> <p>Play Credit Card</p>
-                <a href="#">View your Play Credit CArs detals and offers</a></div>
+            <div class="ham3 ham5">
+                <div class="ham4">
+                    <div> <i class="fa-solid fa-desktop"></i></div>
+                    <div>
+                        <p>Stream Library</p>
+                        <a href="#">Rented & Purchase Movies</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-lock"></i></span>
             </div>
-             <span><i class="fa-solid fa-greater-than"></i></span>
-        </div>
-        <div class="ham3">
-            <div class="ham4">
-               <div> <i class="fa-solid fa-comment"></i></div>
-               <div> <p>Help & Support</p>
-                <a href="#">View commonly asked queries and chat</a></div>
+            <div class="ham3">
+                <div class="ham4">
+                    <div><i class="fa-solid fa-credit-card"></i></div>
+                    <div>
+                        <p>Play Credit Card</p>
+                        <a href="#">View your Play Credit CArs detals and offers</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-greater-than"></i></span>
             </div>
-             <span><i class="fa-solid fa-greater-than"></i></span>
-        </div>
-        <div class="ham3 ham5">
-            <div class="ham4">
-                <div><i class="fa-solid fa-gear"></i></i></div>
-            <div>    <p>Account Settings</p>
-                <a href="#">Location, Payments, Permissions & More</a></div>
+            <div class="ham3">
+                <div class="ham4">
+                    <div> <i class="fa-solid fa-comment"></i></div>
+                    <div>
+                        <p>Help & Support</p>
+                        <a href="#">View commonly asked queries and chat</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-greater-than"></i></span>
             </div>
-           <span><i class="fa-solid fa-lock"></i></span> 
-        </div>
-        <div class="ham3">
-            <div class="ham4">
-               <div> <i class="fa-solid fa-gift"></i></div>
-              <div>  <p>Reward</p>
-                <a href="#">View your rewards & unlock new ones</a></div>
+            <div class="ham3 ham5">
+                <div class="ham4">
+                    <div><i class="fa-solid fa-gear"></i></i></div>
+                    <div>
+                        <p>Account Settings</p>
+                        <a href="#">Location, Payments, Permissions & More</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-lock"></i></span>
             </div>
-             <span><i class="fa-solid fa-greater-than"></i></span>
-        </div>
-        <div class="ham3">
-            <div class="ham4">
-               <div> <i class="fa-solid fa-circle-notch"></i></div>
-               <div> <p>Book a Change</p>
-                <a href="#">BookAChange</a></div>
+            <div class="ham3">
+                <div class="ham4">
+                    <div> <i class="fa-solid fa-gift"></i></div>
+                    <div>
+                        <p>Reward</p>
+                        <a href="#">View your rewards & unlock new ones</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-greater-than"></i></span>
             </div>
-             <span><i class="fa-solid fa-greater-than"></i></span>
+            <div class="ham3">
+                <div class="ham4">
+                    <div> <i class="fa-solid fa-circle-notch"></i></div>
+                    <div>
+                        <p>Book a Change</p>
+                        <a href="#">BookAChange</a>
+                    </div>
+                </div>
+                <span><i class="fa-solid fa-greater-than"></i></span>
+            </div>
         </div>
-    </div>
-        <!-- input modal -->
-       
+
 
         <!-- second wale div e liye -->
         <div class="second-header">
@@ -174,8 +237,8 @@
                         <p>Kochi</p>
                     </div>
                 </div>
-                <div style="text-align: center; color: red; " onclick="viewcity">View all cities</div>
-                <div class="hidden-city">
+                <div style="text-align: center; color: red; cursor: pointer;" id="viewcity">View all cities</div>
+                <div class="hidden-city cities">
                     <p id="city_anantapur">Anantapur</p>
                     <p id="city_anchal">Anchal</p>
                     <p id="city_angul">Angul</p>
@@ -304,18 +367,25 @@
                     <p id="city_warangal">Warangal</p>
                     <p id="city_aurangabad_westbengal">West Bengal</p>
                 </div>
+                     <div style="text-align: center; color: red; cursor: pointer; margin-top: 10px;" id="hidecity" class="cities">Hide all cities</div>
             </div>
 
         </div>
     </div>
 
-    <!-- hero section -->
-    <div class="hero">
-        <marquee> <img src="poster1.avif" alt="">
-            <img src="poster2.avif" alt="">
-            <img src="poster3.avif" alt="">
-        </marquee>
+    <!-- hero slider -->
+    <div class="slider">
+        <!-- for banner slide left to right -->
+        <div class="left-banner" id="left-banner"><i class="fa-solid fa-less-than"></i></div>
+        <div class="right-banner" id="right-banner"><i class="fa-solid fa-greater-than"></i></div>
+        <!-- hero section -->
+        <div class="hero">
+            <img src="poster1.avif" alt="" id="imgs">
+            <img src="poster2.avif" alt="" id="imgs">
+            <img src="poster3.avif" alt="" id="imgs">
+        </div>
     </div>
+
     <!-- next section -->
     <div class="Recommended">
 

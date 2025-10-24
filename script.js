@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cityBtn.addEventListener("click", (e) => {
     e.stopPropagation();
+     document.body.style.overflow = "hidden";
     modal.classList.toggle("open");
     overlay.classList.add("show");
   });
@@ -67,12 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!modal.contains(e.target) && !cityBtn.contains(e.target)) {
       modal.classList.remove("open");
       overlay.classList.remove("show");
+      document.body.style.overflow = "auto";
     }
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") modal.classList.remove("open");
     overlay.classList.remove("show");
+    document.body.style.overflow = "auto";
   });
 
   cityNames.forEach((city) => {
@@ -81,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cityBtn.innerHTML = `${selectedCity} <i class="fa-solid fa-angle-down"></i>`;
       modal.classList.remove("open");
       overlay.classList.remove("show");
+      document.body.style.overflow = "auto";
     });
   });
 
@@ -91,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cityBtn.innerHTML = `${enteredCity} <i class="fa-solid fa-angle-down"></i>`;
         modal.classList.remove("open");
         overlay.classList.remove("show");
+        document.body.style.overflow = "auto";
         input.value = "";
       }
     }
@@ -102,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputmodal = document.getElementById("input-modal");
   const deleteBtn = document.getElementById("deleteBtn");
   const logoinput = document.getElementById("logo-input1");
-
+const logoinput1 = document.querySelector('logo-input1-input');
   logoinput.addEventListener("click", () => {
     inputmodal.classList.add("live");
   });
@@ -134,3 +139,25 @@ document.getElementById("right-banner").onclick = () => {
   i = (i + 1) % total;
   showSlide();
 };
+
+
+
+const logo = document.getElementById('logo');
+const mobile = window.matchMedia('(max-width: 500px)');
+
+function updateLogo(e) {
+  if (e.matches) { 
+    logo.src = 'my logo.webp';
+    logo.style.width ='50px';
+     logo.style.height ='50px';
+     logo.style.margin = '0 10px';
+  } else {
+    logo.src = 'logo.png';
+    logo.style.width ='120px';
+     logo.style.height ='60px';
+  }
+}
+
+updateLogo(mobile);
+
+mobile.addEventListener('change', updateLogo);

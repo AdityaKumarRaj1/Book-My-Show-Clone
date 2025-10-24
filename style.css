@@ -56,6 +56,7 @@ body {
 /* for input modal */
 .input-modal {
   display: none;
+ 
 }
 
 .input-modal.live {
@@ -68,7 +69,6 @@ body {
   margin: 0 20px 0 32%;
   background: white;
   padding: 20px 0;
-
   span {
     font-size: 2rem;
     opacity: 0.6;
@@ -364,7 +364,7 @@ body {
 
 /* Premiere */
 .premiere {
-  background: #2b3148;
+  background: #2a3049;
   min-height: 665px;
   padding-bottom: 50px;
 
@@ -390,7 +390,7 @@ body {
 
   i {
     font-size: 3.5rem;
-    color: rgb(255, 0, 0);
+    color: #db344b;
     margin-right: 15px;
   }
 }
@@ -439,7 +439,7 @@ body {
 /* footer */
 .mini-footer {
   height: 20px;
-  background: #f2f2f2;
+  background: #f2f3f3;
 }
 
 .normal-footer {
@@ -452,7 +452,7 @@ body {
   height: 80px;
 
   button {
-    background: #eb4e62;
+    background: #ed5f71;
     color: white;
     height: 2.5rem;
     width: 9rem;
@@ -460,7 +460,7 @@ body {
     border: none;
     margin: 0 20px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -527,7 +527,7 @@ body {
 
 hr {
   margin-top: 120px;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .last-logo {
@@ -707,13 +707,14 @@ hr {
 
   button {
     background: none;
-    border: 2px solid #eb4e62;
-    color: #eb4e62;
-    box-shadow: rgba(211, 141, 141, 0.642);
-    border-radius: 5px;
+    border: 2px solid #eb8996;
+    color: #ea4e63;
+    box-shadow: rgba(235,137,150, 0.642);
+    border-radius: 10px;
     padding: 10px;
-    font-size: 0.8rem;
-    width: 160px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    width: 130px;
   }
 }
 
@@ -743,13 +744,16 @@ hr {
 
   a {
     text-decoration: none;
+     color: #a1a7c4;
+    font-size: 0.8rem;
+
   }
 }
 
 .ham3 {
   display: flex;
   justify-content: space-between;
-  padding: 18px 15px;
+  padding: 12px 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.223);
 
   span {
@@ -772,7 +776,9 @@ hr {
     opacity: 0.8;
     margin-right: 20px;
   }
-
+p{
+  font-size: 0.92rem
+}
   a {
     text-decoration: none;
     color: rgb(39, 38, 38);
@@ -791,6 +797,68 @@ hr {
 }
 /* for tablet */
 @media only screen and (max-width: 768px) {
+ /* .input-modal1{
+margin-left: 190px;
+  display: flex;
+  justify-content: space-between;
+  input{
+    width: 350px;
+    margin: 10px 10px;
+  }
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ }
+ .suggest-content{
+  width: 350px;
+  position: absolute;
+  left: 200px;
+  top: 75px;
+ }
+ .leftscroll{
+  position: absolute;
+  left: 200px;
+  top: 67px;
+ }
+ .rightscroll{
+  position: absolute;
+  right: 67px;
+  top: 67px;
+ }
+
+ .suggest{
+  width: 400px;
+ } */
+ .modal{
+  width: 740px;
+  min-height: 300px;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+ }
+  .cities-logo1{
+  img {
+  height: 50px;
+ }
+ p{
+margin: 5px 0;
+  font-size: 0.7rem;
+ }
+ } 
+ .ham3{
+  font-size: 0.95rem;
+  padding: 5px 15px;
+ }
+ .ham4{
+   a{
+    font-size: 0.6rem;
+  }
+  p{
+  font-size: 0.8rem;
+  }
+ }
   .first-header {
     padding: 0;
   }
@@ -805,8 +873,8 @@ hr {
   .last-footer {
     padding: 0 30px;
   }
-}
-.Recommended{
+
+  .Recommended{
     padding: 0;
     margin: 0 20px;
 }
@@ -825,10 +893,47 @@ hr {
 .Trending{
     padding: 0 20px;
 }
+}
+
 /* for mobile */
 @media only screen and (max-width: 500px) {
-  .second-header a {
-    display: none;
+.logo-input1{
+margin: 0;
+}
+  .ham-content{
+    height: 570px;
+    width: 300px;
+  }
+  .ham2{
+    a {
+      font-size: 0.7rem;
+      width: 120px;
+    }
+    button{
+      font-size: 0.6rem;
+      height: 30px;
+     width: 100px;
+    }
+  }
+
+ .ham3{
+  font-size: 0.95rem;
+  padding: 5px 15px;
+ }
+ .ham4{
+   a{
+    font-size: 0.6rem;
+  }
+  p{
+  font-size: 0.8rem;
+  }
+ }
+  .second2 {
+display: none;
+  }
+  .second-header{
+display: flex;
+justify-content: center;
   }
   .normal-footer,
   .middle-footer,
@@ -874,6 +979,9 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    img{
+      height: 180px;
+    }
 }
  .heading2{
     padding: 0;
@@ -911,5 +1019,63 @@ opacity: 0.6;
 font-weight: 400;
     }
 
+ }
+ .flex2{
+  padding: 30px 0 0 0;
+ }
+
+ .modal{
+  width: 400px;
+  min-height: 300px;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+ }
+ .cities-logo1{
+  img {
+  height: 50px;
+ }
+ p{
+margin: 5px 0;
+  font-size: 0.7rem;
+ }
+ } 
+
+
+
+ .input-modal1{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  input{
+    width: 350px;
+    margin: 10px 10px;
+  }
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ }
+ .suggest-content{
+  width: 350px;
+  position: absolute;
+  left: 10px;
+  top: 50px;
+ }
+ .leftscroll{
+  position: absolute;
+  left: 10px;
+  top: 67px;
+ }
+ .rightscroll{
+  position: absolute;
+  right: 67px;
+  top: 67px;
+ }
+
+ .suggest{
+  width: 400px;
  }
 }
